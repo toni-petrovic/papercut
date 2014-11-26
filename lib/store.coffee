@@ -120,10 +120,10 @@ exports.TestStore = class TestStore
     @result = {}
 
   getUrlPath: (name, version)->
-    "#{name}-#{version.name}.#{@config.extension}"
+    "#{name}_#{version.name}.#{@config.extension}"
 
   getDstPath: (name, version)->
-    "#{name}-#{version.name}.#{@config.extension}"
+    "#{name}_#{version.name}.#{@config.extension}"
 
   save: (name, version, stdout, stderr, callback)=>
     @result[version.name] = @getUrlPath(name, version)
