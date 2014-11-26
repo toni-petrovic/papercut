@@ -77,7 +77,7 @@ exports.S3Store = class S3Store
   @api private
   ###
   getDstPath: (name, version)->
-    "#{name}-#{version.name}.#{@config.extension}"
+    "#{name}_#{version.name}.#{@config.extension}"
 
   ###
   Get url path of file on S3
@@ -88,7 +88,7 @@ exports.S3Store = class S3Store
   @api private
   ###
   getUrlPath: (name, version)->
-    "#{@awsUrl}/#{@config.bucket}/#{name}-#{version.name}.#{@config.extension}"
+    "#{@awsUrl}/#{@config.bucket}/#{name}_#{version.name}.#{@config.extension}"
 
   ###
   Upload file to S3 and return url path
