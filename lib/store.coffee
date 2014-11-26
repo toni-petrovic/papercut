@@ -19,7 +19,7 @@ exports.FileStore = class FileStore
   @api private
   ###
   getDstPath: (name, version)->
-    path.join @config.directory, "#{name}-#{version.name}.#{@config.extension}"
+    path.join @config.directory, "#{name}_#{version.name}.#{@config.extension}"
 
   ###
   Return url path to image, according to your url setting
@@ -30,7 +30,7 @@ exports.FileStore = class FileStore
   @api private
   ###
   getUrlPath: (name, version)->
-    "#{@config.url or ''}/#{name}-#{version.name}.#{@config.extension}"
+    "#{@config.url or ''}/#{name}_#{version.name}.#{@config.extension}"
 
   ###
   Save image to directory and return all version url path to callback
